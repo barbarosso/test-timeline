@@ -1,0 +1,19 @@
+{
+  "name": "test-timeline",
+  "version": "0.0.0",
+  "homepage": "https://github.com/barbarosso/test-timeline",
+  "authors": [
+    "Pieter Van Neste <pieter@dreamsandcreations.be>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
