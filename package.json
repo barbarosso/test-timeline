@@ -5,19 +5,24 @@
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/barbarosso/test-timeline.git"
+    "url": "https://github.com/barbarosso/test-core.git"
   },
   "scripts": {
-    "watch-js": "watchify ./src/index.js -o ./bin/js/test-timeline.js -dv --ignore-watch=GLOB --no-bundle-external",
-    "build-libs": "browserify -r signals > ./bin/js/libs.js",
-    "test": "mochify --watch --recursive --reporter spec"
+    "watch-js": "watchify ./src/index.js -o ./bin/js/test-timeline.js --exclude signals --exclude gsap",
+    "build-libs": "browserify -r signals -r gsap > ./bin/js/libs.js",
+    "test": "mochify --watch --recursive --reporter spec",
+    "html-copy": "include html/index.html -o bin/"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "include-html": "^1.2.1",
     "mochify": "^2.16.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "test-core": "git+https://github.com/barbarosso/test-core.git",
+    "signals": "^1.0.0"
   }
 }

@@ -6,13 +6,11 @@
  * @license     {@link }
  */
 var mainTimeline = require('./MainTimeline');
-var signal = new signals.Signal();
-console.log(signal);
+var testCore = require('test-core');
+console.log(testCore);
+
+var Signal = require("signals");
+console.log("signals: " + Signal);
 
 global.mainTimeline = mainTimeline;
-
-
-var mainClass = new MainClass();
-console.log(mainClass);
-
 module.exports = mainTimeline;
